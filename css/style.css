@@ -1,0 +1,63 @@
+*  {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;   
+}
+
+.gameboard{
+    width: 80%;
+    height: 600px;
+    width: 800px;
+    border: 5px solid #333;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+}
+.zombie {
+    position: absolute;
+    bottom: 30px;
+    width: 250px;
+    animation: zombie-animation 2s infinite linear;
+    transform: scaleX(-1);
+}
+.steve{
+    position: absolute;
+    bottom: 65px;
+    width: 200px;
+    transform: scaleX(-1);
+}
+.jump{
+    animation: jump 900ms ease-out;
+}
+.background{
+    position: absolute;
+    width: 800px;
+}
+@keyframes zombie-animation {
+    from{
+        right: -300px;
+    }
+    to{
+        right: 100%;
+    }
+    
+}
+@keyframes jump {
+  
+    0%{
+        bottom: 65px;
+    }
+    40%{
+        bottom: 300px;
+    }
+    50%{
+        bottom: 250px;
+    }
+    70%{
+        bottom: 200px;
+    }
+    100%{
+        bottom: 65px;
+    }
+    
+}
