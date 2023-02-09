@@ -14,7 +14,7 @@ const jump = () => {
 const loop = setInterval(() => {
 
     const zombiePosition = zombie.offsetLeft;
-    const stevePosition = +window.getComputedStyle(steve).bottom.replace('px','');
+    const stevePosition = window.getComputedStyle(steve).bottom.replace('px','');
 
     if (zombiePosition <= 50 && zombiePosition > 0 && stevePosition < 200){
 
